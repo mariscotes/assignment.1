@@ -1,0 +1,281 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+
+}
+
+header {
+
+    background-image: url(bg.png);
+    position: relative; 
+    text-align: center;
+    padding: 20px;
+    height: 150px; 
+    color: black; 
+    overflow: hidden; 
+    color: white; 
+}
+
+.background-box {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; 
+
+}
+
+header h1 {
+
+    position: relative; 
+    z-index: 1;
+    padding-top: 40px; 
+
+}
+
+header p {
+
+    position: relative; 
+    z-index: 1; 
+
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem; 
+}
+
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.8rem; 
+        padding: 6px; 
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    margin: 20px;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 30%; 
+    max-width: 400px;
+    padding: 15px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.sidebar img {
+    width: 100%; 
+    height: auto; 
+}
+
+.content {
+    background-image: url(tree.png);
+    width: 65%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.sidebar img,
+.content img,
+.image-box img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    border-radius: 10px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 30px;
+}
+
+.image-box {
+    width: 32%;
+    height: auto; 
+    text-align: center;
+    margin-left: 0; 
+    margin-right: 0; 
+    padding-right: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.image-box p {
+    margin-top: 15px;
+    font-size: 8px; 
+    color: #555;
+    text-align: center;
+}
+
+
+@media (min-width: 701px) {
+    .image-box p {
+        font-size: 10px; 
+    }
+}
+
+@media (min-width: 800px) {
+    .image-box p {
+        font-size: 12px; 
+    }
+}
+
+@media (min-width: 900px) {
+    .image-box p {
+        font-size: 14px; 
+    }
+}
+
+@media (min-width: 1030px) {
+    .image-box p {
+        font-size: 16px; 
+    }
+}
+
+.content img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0; 
+    transition: transform 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05);
+}
+
+.content .image-grid {
+    display: none; 
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content .image-grid img {
+    width: 30%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content-item {
+    display: flex;
+    align-items: center; 
+    gap: 0; 
+    margin-bottom: 1px; 
+}
+
+.content-item img {
+    width: 40%; 
+    max-width: 250px; 
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content-item .text {
+    width: 55%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1030px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 90%; 
+        max-width: 400px; 
+    }
+
+    .content img {
+        max-height: 200px; 
+    }
+
+    .content .image-grid img {
+        width: 100%; 
+        max-height: 150px; 
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1029px) {
+    .container {
+        display: flex; 
+        flex-direction: row; 
+        align-items: stretch; 
+        gap: 20px; 
+    }
+
+    .sidebar, .content {
+        flex: 1; 
+        min-width: 0; 
+        max-width: 400px; 
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .container {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .sidebar, .content {
+        width: 90%; 
+        max-width: 400px; 
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        margin-bottom: 20px; 
+    }
+}
